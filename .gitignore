@@ -12,3 +12,12 @@
 
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
+
+# editor related files
+*.swp*
+*.swo*
+
+# Project (build/backup etc) files
+.byeworld
+byeworld-linux-amd64
+*.bak*
