@@ -19,5 +19,8 @@
 
 # Project (build/backup etc) files
 .byeworld
+*/.byeworld
 byeworld-linux-amd64
+*/byeworld-linux-amd64
 *.bak*
+*/*.bak*
