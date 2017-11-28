@@ -14,5 +14,5 @@ func main() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	curTime := time.Now().Format("02.01.2006 15:04:05")
 
-	fmt.Fprintf(w, "Time is %s", curTime)
+	fmt.Fprintf(w, "Hello world, the time is %s", curTime)
 }

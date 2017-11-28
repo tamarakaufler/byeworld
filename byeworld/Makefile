@@ -1,7 +1,7 @@
 .PHONY: all
 all: .byeworld
 
-REV=a000002
+REV=a000003
 
 .byeworld: byeworld-linux-amd64 Dockerfile
 	docker build -t quay.io/tamara/byeworld:master-${REV} .
