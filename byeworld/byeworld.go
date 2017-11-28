@@ -1,25 +1,18 @@
 package main
 
 import (
-	"flag"
 	"fmt"
-	"log"
 	"net/http"
+	"time"
 )
 
-var rev = "devel"
-
 func main() {
-	var (
-		addr = flag.String("addr", ":3000", "HTTP listen address")
-		msg  = flag.String("msg", "Bye, my good old world; welcome terrifying new world", "Message to print")
-	)
+	http.HandleFunc("/", handler)
+	http.ListenAndServe(":3000", nil)
+}
 
-	flag.Parse()
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		log.Printf("%s %s %s", r.RemoteAddr, r.Method, r.URL.Path)
-		fmt.Fprintf(w, *msg+"\n")
-	})
-	log.Printf("%s: listening on %s", rev, *addr)
-	log.Fatal(http.ListenAndServe(*addr, nil))
+func handler(w http.ResponseWriter, r *http.Request) {
+	curTime := time.Now().Format("02.01.2006 15:04:05")
+
+	fmt.Fprintf(w, "%s", curTime)
 }
