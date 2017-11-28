@@ -18,6 +18,8 @@
 *.swo*
 
 # Project (build/backup etc) files
+byeworld
+*/byeworld
 .byeworld
 */.byeworld
 byeworld-linux-amd64
