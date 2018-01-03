@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: byeworld
-        image: quay.io/tamarakaufler/byeworld:master-a000001
+        image: quay.io/tamara/byeworld:master-a000001
         args:
         - -msg=Bye all
         ports:
